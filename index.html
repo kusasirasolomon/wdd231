@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Course Home Page for WDD 231" />
+  <meta name="author" content="Your Name" />
+  <title>WDD 231 - Course Home Page</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/profile.webp" alt="Profile photo" />
+    <span>Kusasira Solomon</span>
+    <button id="menu" aria-label="menu">&#9776;</button>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Final</a></li>
+        <li><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></li>
+        <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>Welcome</h2>
+      <p>This is my course homepage for WDD 231. Below you will find dynamically loaded course data with filters and credit calculations.</p>
+    </section>
+
+    <section>
+      <h2>Course Filter</h2>
+      <button onclick="filterCourses('all')">All</button>
+      <button onclick="filterCourses('WDD')">WDD Courses</button>
+      <button onclick="filterCourses('CSE')">CSE Courses</button>
+      <p>Total Credits: <span id="totalCredits">0</span></p>
+    </section>
+
+    <section>
+      <h2>Course List</h2>
+      <div id="courseContainer"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span>Kusasira Solomon Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

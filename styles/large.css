@@ -1,0 +1,17 @@
+@media (min-width: 640px) {
+  nav ul {
+    display: flex !important;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+}
