@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atron Chamber of Commerce</title>
+    <meta name="description" content="Join the Timbuktu Chamber of Commerce to grow your business and connect with the community">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Atron Chamber of Commerce</h1>
+        <button id="menu-button">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/image.webp">
+                <source media="(min-width: 601px)" srcset="images/image.webp">
+                <img src="images/image.webp" alt="Timbuktu cityscape">
+            </picture>
+            <button class="cta-button">Join the Chamber</button>
+        </section>
+
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <!-- Events content -->
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <!-- Weather widget -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>Atron Chamber of Commerce</p>
+            <p>123 Main Street, Timbuktu, ID 12345</p>
+            <p>info@timbuktuchamber.org</p>
+            <p>(208) 555-1234</p>
+        </div>
+        <div class="dev-info">
+            <p>&copy;<span id="current-year"></span> Atron Chamber</p>
+            <p>Kusasira Solomon</p>
+            <p>WDD 230 Project</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

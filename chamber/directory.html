@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timbuktu Chamber of Commerce Business Directory">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourusername.github.io/wdd231/chamber/images/social-preview.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+    <title>Business Directory | Atron Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Atron Chamber of Commerce</h1>
+            <button id="menu-button" aria-label="Navigation Menu">☰</button>
+        </div>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="directory-main">
+        <div class="directory-header">
+            <h2>Business Directory</h2>
+            <div class="view-controls">
+                <button id="grid-view-btn" class="active" aria-pressed="true">
+                    <span class="icon">◼◼◼</span> Grid View
+                </button>
+                <button id="list-view-btn" aria-pressed="false">
+                    <span class="icon">≡</span> List View
+                </button>
+            </div>
+        </div>
+
+        <div id="members-container" class="grid-view">
+            <!-- Member cards will be dynamically inserted here by JavaScript -->
+            <div class="loading-message">Loading business directory...</div>
+        </div>
+
+        <div class="directory-footer">
+            <p>Showing <span id="member-count">0</span> local businesses</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Atron Chamber of Commerce</h3>
+                <address>
+                    <p>123 Commerce Street<br>atron, ID 12345</p>
+                    <p><a href="mailto:info@timbuktuchamber.org">info@atronchamber.org</a></p>
+                    <p><a href="tel:+12085551234">(208) 555-1234</a></p>
+                </address>
+            </div>
+            <div class="dev-info">
+                <p>&copy;<span id="current-year"></span> Atron Chamber of Commerce</p>
+                <p><strong>Kusasira Solomon</strong></p>
+                <p>WDD 231 Project</p>
+                <p>Last Modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/directory.js"></script>
+</body>
+</html>
