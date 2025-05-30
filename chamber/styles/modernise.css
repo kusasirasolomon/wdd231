@@ -1,0 +1,105 @@
+/* Modern styling for directory page */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  color: #004d99;
+}
+
+.view-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-controls button {
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-controls button:hover,
+.view-controls button.active {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.directory-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ccc;
+}
+
+.member-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.member-card h3 {
+  color: #004d99;
+  margin-bottom: 0.5rem;
+}
+
+.member-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.member-card a:hover {
+  text-decoration: underline;
+}
+
+/* List view specifics */
+.list-view .member-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.list-view .member-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.list-view .member-card div {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,6 +1,5 @@
-// data/members.json
 {
-    "companies": [
+    "members": [
         {
             "name": "IDWEB",
             "address": "2115 S Vista Avenue Boise, ID 83705",

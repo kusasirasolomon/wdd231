@@ -1,59 +1,58 @@
-// directory.js
-document.addEventListener('DOMContentLoaded', () => {
-    // Load member data
-    async function getMembers() {
-        try {
-            const response = await fetch('data/members.json');
-            const data = await response.json();
-            displayMembers(data.companies);
-        } catch (error) {
-            console.error('Error loading member data:', error);
-        }
-    }
+// scripts/directory.js
 
-    // Display members
-    function displayMembers(members) {
-        const container = document.getElementById('members-container');
-        container.innerHTML = '';
-        
-        members.forEach(member => {
-            const card = document.createElement('div');
-            card.className = 'member-card';
-            card.innerHTML = `
-                <img src="images/${member.image}" alt="${member.name} logo">
-                <h3>${member.name}</h3>
-                <p>${member.address}</p>
-                <p>${member.phone}</p>
-                <a href="${member.website}" target="_blank">Website</a>
-                <p>Membership Level: ${getMembershipLevel(member.level)}</p>
-            `;
-            container.appendChild(card);
-        });
-    }
+const memberContainer = document.getElementById('members-container');
+const memberCountDisplay = document.getElementById('member-count');
+const gridViewBtn = document.getElementById('grid-view-btn');
+const listViewBtn = document.getElementById('list-view-btn');
 
-    // Toggle between views
-    document.getElementById('grid-view').addEventListener('click', () => {
-        document.getElementById('members-container').className = 'grid-view';
-    });
+async function fetchMembers() {
+  try {
+    const response = await fetch('data/members.json');
+    if (!response.ok) throw new Error('Failed to load member data');
+    const data = await response.json();
+    displayMembers(data.members);
+  } catch (error) {
+    console.error('Error fetching members:', error);
+    memberContainer.innerHTML = '<p class="error">Unable to load business directory at this time.</p>';
+  }
+}
 
-    document.getElementById('list-view').addEventListener('click', () => {
-        document.getElementById('members-container').className = 'list-view';
-    });
+function displayMembers(members) {
+  memberContainer.innerHTML = '';
+  members.forEach(member => {
+    const card = document.createElement('section');
+    card.classList.add('member-card');
+    card.innerHTML = `
+      
+      <h3>${member.name}</h3>
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
+      <a href="${member.website}" target="_blank">Visit Website</a>
+    `;
+    memberContainer.appendChild(card);
+  });
+  memberCountDisplay.textContent = members.length;
+}
 
-    // Helper function for membership level
-    function getMembershipLevel(level) {
-        const levels = {
-            1: 'Member',
-            2: 'Silver',
-            3: 'Gold'
-        };
-        return levels[level] || 'Member';
-    }
+function toggleView(mode) {
+  if (mode === 'grid') {
+    memberContainer.classList.add('grid-view');
+    memberContainer.classList.remove('list-view');
+    gridViewBtn.classList.add('active');
+    gridViewBtn.setAttribute('aria-pressed', 'true');
+    listViewBtn.classList.remove('active');
+    listViewBtn.setAttribute('aria-pressed', 'false');
+  } else {
+    memberContainer.classList.add('list-view');
+    memberContainer.classList.remove('grid-view');
+    listViewBtn.classList.add('active');
+    listViewBtn.setAttribute('aria-pressed', 'true');
+    gridViewBtn.classList.remove('active');
+    gridViewBtn.setAttribute('aria-pressed', 'false');
+  }
+}
 
-    // Footer information
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-    document.getElementById('last-modified').textContent = document.lastModified;
+gridViewBtn.addEventListener('click', () => toggleView('grid'));
+listViewBtn.addEventListener('click', () => toggleView('list'));
 
-    // Initialize
-    getMembers();
-});
+fetchMembers();
