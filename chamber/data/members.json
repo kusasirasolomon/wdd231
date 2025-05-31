@@ -5,7 +5,7 @@
             "address": "2115 S Vista Avenue Boise, ID 83705",
             "phone": "(208) 342-9386",
             "website": "https://idwebboise.com/",
-            "image": "idweb.png",
+            "image": "logo1.png",
             "level": 3
         },
         {
@@ -13,7 +13,7 @@
             "address": "4072 E Arch Drive Meridian, ID 82648",
             "phone": "(208) 631-0640",
             "website": "https://www.surgewebdesign.com/",
-            "image": "surge.png",
+            "image": "logo2.png",
             "level": 2
         },
         {
@@ -21,7 +21,7 @@
             "address": "1788 E Summerspace Court Meridian, ID 83646",
             "phone": "(208) 641-4964",
             "website": "https://graphiczen.com/",
-            "image": "graphiczen.png",
+            "image": "logo3.png",
             "level": 2
         },
         {
@@ -29,7 +29,7 @@
             "address": "1215 3rd Street Hampel, ID 83651",
             "phone": "(208) 461-5070",
             "website": "https://www.proportionmedia.com/",
-            "image": "proportion.png",
+            "image": "logo4.png",
             "level": 1
         },
         {
@@ -37,7 +37,7 @@
             "address": "Star, ID 83860",
             "phone": "(208) 489-5810",
             "website": "https://flashtechservices.com/",
-            "image": "flash.png",
+            "image": "logo5.png",
             "level": 1
         },
         {
@@ -45,7 +45,7 @@
             "address": "1734 E Overland Road, Boise, ID 83705",
             "phone": "(208) 888-4073",
             "website": "https://www.meteexpresscar.com/",
-            "image": "mete.png",
+            "image": "logo6.png",
             "level": 3
         },
         {
@@ -53,7 +53,7 @@
             "address": "1913 Red Bank View, Boise, ID 83705",
             "phone": "(208) 666-4022",
             "website": "http://www.stephenrockservices.com/",
-            "image": "stephen.png",
+            "image": "logo7.png",
             "level": 2
         }
     ]

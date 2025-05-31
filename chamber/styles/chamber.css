@@ -1,0 +1,315 @@
+/* ========= Variables ========= */
+:root {
+  --primary: #006d77;
+  --secondary: #ffb703;
+  --accent: #83c5be;
+  --bg: #f8f9fa;
+  --white: #ffffff;
+  --text: #222;
+  --text-light: #666;
+  --font: 'Poppins', sans-serif;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --radius: 12px;
+}
+
+/* ========= Reset ========= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ========= Typography ========= */
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 1em;
+  color: var(--text-light);
+}
+
+/* ========= Layout ========= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* ========= Header ========= */
+header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+/* ========= Nav ========= */
+nav {
+  background: var(--secondary);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* ========= Hero ========= */
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  padding: 2rem 3rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  display: inline-block;
+  background: var(--secondary);
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #fca311;
+}
+
+/* ========= Cards ========= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ========= Weather ========= */
+#weather-section {
+  background: #e7f1f5;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 2rem auto;
+}
+
+#weather {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.forecast-card {
+  background: white;
+  padding: 1rem;
+  width: 140px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+/* ========= Spotlight ========= */
+#spotlight-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.spotlight {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.spotlight img {
+  max-width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+/* ========= Events ========= */
+.events {
+  background: #fff4e6;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.event {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-left: 4px solid var(--primary);
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ========= Footer ========= */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+/* ========= Media ========= */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+  }
+  #weather-section {
+  padding: 2rem;
+  background-color: #eef4f8;
+  text-align: center;
+}
+
+#weather {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  max-width: 240px;
+  text-align: center;
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.spotlight {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 280px;
+  text-align: center;
+}
+
+.spotlight img {
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.spotlight h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0.5rem 0;
+}
+
+.spotlight p,
+.spotlight a {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.3rem 0;
+}
+
+.spotlight .level {
+  font-weight: bold;
+  color: #0077cc;
+}
+.cta-button {
+    display: inline-block;
+    margin: 1rem 0 1.5rem 0;
+    padding: 0.75rem 1.5rem;
+    background-color: #2563eb;  /* Bright blue */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #1e40af; /* Darker blue on hover/focus */
+    outline: none;
+    box-shadow: 0 0 5px #1e40af;
+}
+
+
+}
