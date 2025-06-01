@@ -1,51 +1,41 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atron Chamber of Commerce home page" />
-    <title>Atron Chamber of Commerce</title>
-    <meta name="description" content="Join the Timbuktu Chamber of Commerce to grow your business and connect with the community">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/hf.css">
-    <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="styles/chamber.css" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Timbuktu Chamber of Commerce to grow your business and connect with the community.">
+  <meta name="author" content="Kusasira Solomon">
+  <meta property="og:title" content="Atron Chamber of Commerce">
+  <meta property="og:description" content="Grow your business and connect with the Atron community through our Chamber.">
+  <meta property="og:image" content="images/chamber-og.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
 
+  <title>Atron Chamber of Commerce</title>
+  
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/hf.css">
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>Atron Chamber of Commerce</h1>
       <nav>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
-          
         </ul>
       </nav>
     </div>
-    <main class="directory-main">
-    <div class="directory-header">
-        <h2>Business Directory</h2>
-        <a href="join.html" class="cta-button" aria-label="Join the Atron Chamber of Commerce">Join the Chamber of Commerce</a>
-        <div class="view-controls">
-            <button id="grid-view-btn" class="active" aria-pressed="true">
-                <span class="icon">◼◼◼</span> Grid View
-            </button>
-            <button id="list-view-btn" aria-pressed="false">
-                <span class="icon">≡</span> List View
-            </button>
-        </div>
-    </div>
-    ...
-</main>
-
   </header>
 
   <main>
+    <h1>Atron Chamber of Commerce</h1> <!-- Only one h1 -->
+
     <!-- Hero Section -->
     <section class="hero">
       <picture>
@@ -53,18 +43,29 @@
         <img src="images/hero.jpg" alt="Mapleton Chamber - Community and Business Together">
       </picture>
       <div class="hero-content">
-        <h1>Welcome to the Atron Chamber of commerce</h1>
         <p>Empowering Local Business and Community</p>
         <a href="join.html" class="cta-button">Join the Chamber</a>
       </div>
     </section>
 
+    <!-- Directory Controls -->
+    <section class="directory-header">
+      <h2>Business Directory</h2>
+      <a href="join.html" class="cta-button" aria-label="Join the Atron Chamber of Commerce">Join the Chamber of Commerce</a>
+      <div class="view-controls">
+        <button id="grid-view-btn" class="active" aria-pressed="true">
+          <span class="icon">◼◼◼</span> Grid View
+        </button>
+        <button id="list-view-btn" aria-pressed="false">
+          <span class="icon">≡</span> List View
+        </button>
+      </div>
+    </section>
+
     <!-- Weather Section -->
     <section id="weather-section">
-      <h2>Weather Fore cast</h2>
-      <div id="weather">
-        <!-- Weather data will be dynamically inserted by weather.js -->
-      </div>
+      <h2>Weather Forecast</h2>
+      <div id="weather"></div>
     </section>
 
     <!-- Current Events -->
