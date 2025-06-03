@@ -1,0 +1,149 @@
+/* Reset and base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f4f7f8;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+nav a {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #0055a5;
+  color: #fff;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem 1rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.1);
+  border-radius: 10px;
+}
+
+.thankyou-message {
+  text-align: center;
+}
+
+.thankyou-message h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #0078d7;
+}
+
+.thankyou-message p#greeting {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.thankyou-message h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0078d7;
+  padding-bottom: 0.3rem;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+ul li strong {
+  width: 180px;
+  display: inline-block;
+  color: #0078d7;
+}
+
+footer {
+  background-color: #003366;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}

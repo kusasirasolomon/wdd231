@@ -1,116 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Join the Timbuktu Chamber of Commerce to grow your business">
-    <meta name="author" content="Your Name">
-    <title>Join the Chamber | Atron Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chamber of Commerce Membership Join Page" />
+  <title>Join | Atron Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/join.css" />
+  
+  <script defer src="scripts/join.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Atron Chamber of Commerce</h1>
-        <button id="menu-button">☰</button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html" class="active">Join</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html" class="active">Join</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <h2>Join the Chamber</h2>
-        
-        <form id="join-form" method="get" action="thankyou.html">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label for="first-name">First Name* <input type="text" id="first-name" name="first-name" required></label>
-                <label for="last-name">Last Name* <input type="text" id="last-name" name="last-name" required></label>
-                <label for="title">Title or Position <input type="text" id="title" name="title" pattern="[A-Za-z -]{7,}" title="Minimum 7 characters, only letters, hyphens, and spaces"></label>
-                <label for="email">Email* <input type="email" id="email" name="email" placeholder="user@domain.com" required></label>
-                <label for="phone">Mobile Phone* <input type="tel" id="phone" name="phone" required></label>
-            </fieldset>
+  <main class="join-container">
+    <section class="form-section">
+      <h1>Join the Chamber</h1>
+      <form method="get" action="thankyou.html">
+        <label>First Name
+          <input type="text" name="fname" title="Enter your first name" required autocomplete="given-name" />
+        </label>
+        <label>Last Name
+          <input type="text" name="lname" title="Enter your last name" required autocomplete="family-name" />
+        </label>
+        <label>Title in Organization
+          <input type="text" name="orgtitle" title="Your role in the organization" pattern="[A-Za-z\-\s]{7,}" autocomplete="organization-title" />
+        </label>
+        <label>Email
+          <input type="email" name="email" title="Enter your email" required autocomplete="email" placeholder="example@email.com" />
+        </label>
+        <label>Mobile Phone
+          <input type="tel" name="phone" title="Enter your phone number" required autocomplete="tel" />
+        </label>
+        <label>Business/Organization Name
+          <input type="text" name="organization" title="Business or organization name" required autocomplete="organization" />
+        </label>
+        <label>Membership Level
+          <select name="membership" title="Select membership level">
+            <option value="NP">NP Membership (Non-profit)</option>
+            <option value="Bronze">Bronze Membership</option>
+            <option value="Silver">Silver Membership</option>
+            <option value="Gold">Gold Membership</option>
+          </select>
+        </label>
+        <label>Description of Business/Organization
+          <textarea name="description" title="Tell us about your business"></textarea>
+        </label>
+        <input type="hidden" id="timestamp" name="timestamp" />
+        <input type="submit" value="Submit Application" />
+      </form>
+    </section>
 
-            <fieldset>
-                <legend>Business Information</legend>
-                <label for="business-name">Business Name* <input type="text" id="business-name" name="business-name" required></label>
-                <label for="business-description">Business Description <textarea id="business-description" name="business-description" rows="4"></textarea></label>
-            </fieldset>
+    <aside class="membership-cards">
+      <div class="card" id="np">
+        <h2>NP Membership</h2>
+        <p>No cost. For nonprofits.</p>
+        <button onclick="openModal('modal-np')">View Benefits</button>
+      </div>
+      <div class="card" id="bronze">
+        <h2>Bronze</h2>
+        <p>Entry-level benefits.</p>
+        <button onclick="openModal('modal-bronze')">View Benefits</button>
+      </div>
+      <div class="card" id="silver">
+        <h2>Silver</h2>
+        <p>Mid-tier exposure and events.</p>
+        <button onclick="openModal('modal-silver')">View Benefits</button>
+      </div>
+      <div class="card" id="gold">
+        <h2>Gold</h2>
+        <p>Top visibility and promotions.</p>
+        <button onclick="openModal('modal-gold')">View Benefits</button>
+      </div>
+    </aside>
 
-            <fieldset>
-                <legend>Membership Level</legend>
-                <label><input type="radio" name="membership" value="np" checked> Non-Profit (FREE)</label>
-                <label><input type="radio" name="membership" value="bronze"> Bronze Membership ($50/month)</label>
-                <label><input type="radio" name="membership" value="silver"> Silver Membership ($100/month)</label>
-                <label><input type="radio" name="membership" value="gold"> Gold Membership ($150/month)</label>
-            </fieldset>
+    <!-- Modals -->
+    <div class="modal" id="modal-np">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-np')">&times;</span>
+        <h3>NP Membership Benefits</h3>
+        <ul>
+          <li>Free Listing</li>
+          <li>Basic Event Access</li>
+        </ul>
+      </div>
+    </div>
 
-            <input type="hidden" id="timestamp" name="timestamp">
-            
-            <button type="submit">Join Now</button>
-        </form>
+    <div class="modal" id="modal-bronze">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+        <h3>Bronze Membership Benefits</h3>
+        <ul>
+          <li>Event Discounts</li>
+          <li>Quarterly Networking</li>
+        </ul>
+      </div>
+    </div>
 
-        <section class="membership-benefits">
-            <h3>Membership Benefits</h3>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h4>Non-Profit</h4>
-                    <ul>
-                        <li>Business listing in directory</li>
-                        <li>Access to member resources</li>
-                    </ul>
-                </div>
-                <div class="benefit-card">
-                    <h4>Bronze</h4>
-                    <ul>
-                        <li>All Non-Profit benefits</li>
-                        <li>Discounts on events</li>
-                        <li>Monthly newsletter</li>
-                    </ul>
-                </div>
-                <div class="benefit-card">
-                    <h4>Silver</h4>
-                    <ul>
-                        <li>All Bronze benefits</li>
-                        <li>Featured in directory</li>
-                        <li>Annual business training</li>
-                    </ul>
-                </div>
-                <div class="benefit-card">
-                    <h4>Gold</h4>
-                    <ul>
-                        <li>All Silver benefits</li>
-                        <li>Premium directory placement</li>
-                        <li>VIP event access</li>
-                        <li>Marketing support</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+    <div class="modal" id="modal-silver">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+        <h3>Silver Membership Benefits</h3>
+        <ul>
+          <li>Homepage Spotlight</li>
+          <li>Event Discounts</li>
+          <li>Annual Training</li>
+        </ul>
+      </div>
+    </div>
 
-    <footer>
-        <div class="contact-info">
-            <p>Atron Chamber of Commerce</p>
-            <p>123 Main Street, Timbuktu, ID 12345</p>
-            <p>info@atronchamber.org</p>
-            <p>(208) 555-1234</p>
-        </div>
-        <div class="dev-info">
-            <p>&copy;<span id="current-year"></span> Atron Chamber</p>
-            <p>Kusasira Solomon</p>
-            <p>WDD 230 Project</p>
-            <p>Last Modified: <span id="last-modified"></span></p>
-        </div>
-    </footer>
+    <div class="modal" id="modal-gold">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+        <h3>Gold Membership Benefits</h3>
+        <ul>
+          <li>All Silver Benefits</li>
+          <li>Exclusive Event Sponsorship</li>
+          <li>Top Directory Position</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 
-    <script src="scripts/join.js"></script>
+  <footer>
+    <p>&copy; 2025 Atron Chamber of Commerce</p>
+  </footer>
 </body>
 </html>
