@@ -9,13 +9,11 @@ function displayCourses(filtered) {
   const container = document.getElementById("courseContainer");
   container.innerHTML = "";
 
-  let total = 0;
-
   filtered.forEach(course => {
-    total += course.credits;
-
     const card = document.createElement("div");
-    card.className = course.completed ? "completed" : "card";
+    card.className = "card";
+    if (course.completed) card.classList.add("completed");
+
     card.innerHTML = `
       <h3>${course.code}</h3>
       <p>${course.name}</p>
@@ -24,7 +22,11 @@ function displayCourses(filtered) {
     container.appendChild(card);
   });
 
-  document.getElementById("totalCredits").textContent = total;
+  const totalCredits = filtered
+    .filter(course => course.completed)
+    .reduce((sum, course) => sum + course.credits, 0);
+
+  document.getElementById("totalCredits").textContent = totalCredits;
 }
 
 function filterCourses(subject) {

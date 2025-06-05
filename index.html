@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Course Home Page for WDD 231" />
-  <meta name="author" content="Your Name" />
+  <meta name="author" content="Kusasira Solomon" />
   <title>WDD 231 - Course Home Page</title>
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
-  <script src="scripts/courses.js" defer></script> 
+  <script src="scripts/courses.js" defer></script>
 </head>
 <body>
   <header>
@@ -41,10 +41,12 @@
 
     <section>
       <h2>Course Filter</h2>
-      <button onclick="filterCourses('all')">All</button>
-      <button onclick="filterCourses('WDD')">WDD Courses</button>
-      <button onclick="filterCourses('CSE')">CSE Courses</button>
-      <p>Total Credits: <span id="totalCredits">0</span></p>
+      <div class="filter-buttons">
+        <button onclick="filterCourses('all')">All</button>
+        <button onclick="filterCourses('WDD')">WDD Courses</button>
+        <button onclick="filterCourses('CSE')">CSE Courses</button>
+      </div>
+      <p>Total Credits: <strong><span id="totalCredits">0</span></strong></p>
     </section>
 
     <section>
@@ -54,7 +56,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span>Kusasira Solomon Uganda</p>
+    <p>&copy; <span id="year"></span> Kusasira Solomon, Uganda</p>
     <p id="lastModified"></p>
   </footer>
 </body>
