@@ -1,122 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover Timbuktu - Local attractions, demographics, and events">
-    <meta name="author" content="Your Name">
-    <title>Discover Atron | Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Discover Mapleton - Explore locations and attractions in our chamber area.">
+  <meta name="author" content="Your Name">
+  <title>Discover | Mapleton Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 641px)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 1025px)">
+  <script defer src="scripts/lastvisit.js"></script>
+  <script defer src="scripts/discover.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Atron Chamber of Commerce</h1>
-        <button id="menu-button">☰</button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html" class="active">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Mapleton Chamber of Commerce</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html" class="active">Discover</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <main class="discover-main">
-        <section class="demographics">
-            <h2>About Timbuktu</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <h3>Population</h3>
-                    <p>25,000</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Median Age</h3>
-                    <p>34.5 years</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Median Income</h3>
-                    <p>$65,000</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Founded</h3>
-                    <p>1872</p>
-                </div>
-            </div>
-            <p>Atron is a vibrant community known for its rich history and thriving business environment. Our city offers a perfect blend of small-town charm and modern amenities.</p>
-        </section>
+  <main id="discover-page">
+    <section id="visitor-message" class="sidebar">
+      <!-- JS will insert visit message here -->
+    </section>
 
-        <section class="attractions">
-            <h2>Local Attractions</h2>
-            <div class="gallery">
-                <figure>
-                    <img src="images/attraction1.webp" alt="Timbuktu Historic District" loading="lazy" width="400" height="300">
-                    <figcaption>Historic Downtown District</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/attraction2.webp" alt="Riverfront Park" loading="lazy" width="400" height="300">
-                    <figcaption>Riverfront Park & Trails</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/attraction3.webp" alt="Museum of Industry" loading="lazy" width="400" height="300">
-                    <figcaption>Museum of Industry</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/attraction4.webp" alt="Annual Festival" loading="lazy" width="400" height="300">
-                    <figcaption>Annual Harvest Festival</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/attraction5.webp" alt="Ski Resort" loading="lazy" width="400" height="300">
-                    <figcaption>Mountain Peak Ski Resort</figcaption>
-                </figure>
-            </div>
-        </section>
+    <section class="grid-gallery">
+      <!-- Cards will be inserted here by discover.js -->
+    </section>
+  </main>
 
-        <section class="events-calendar">
-            <h2>Upcoming Events</h2>
-            <div class="events-list">
-                <div class="event-card">
-                    <h3>Business Networking Mixer</h3>
-                    <p><strong>Date:</strong> June 15, 2024</p>
-                    <p><strong>Location:</strong> Chamber Office</p>
-                </div>
-                <div class="event-card">
-                    <h3>Summer Music Festival</h3>
-                    <p><strong>Date:</strong> July 20-22, 2024</p>
-                    <p><strong>Location:</strong> Riverfront Park</p>
-                </div>
-                <div class="event-card">
-                    <h3>Small Business Workshop</h3>
-                    <p><strong>Date:</strong> August 5, 2024</p>
-                    <p><strong>Location:</strong> Community Center</p>
-                </div>
-            </div>
-        </section>
+  <footer>
+    <p>&copy; <span id="year"></span> Mapleton Chamber of Commerce. All rights reserved.</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
 
-        <section class="visit-message">
-            <div id="days-visited"></div>
-            <p>Welcome back! You last visited <span id="last-visit"></span> days ago.</p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="contact-info">
-            <p>Atron Chamber of Commerce</p>
-            <p>123 Main Street, Timbuktu, ID 12345</p>
-            <p>info@timbuktuchamber.org</p>
-            <p>(208) 555-1234</p>
-        </div>
-        <div class="dev-info">
-            <p>&copy;<span id="current-year"></span> Atron Chamber</p>
-            <p>Kusasira Solomon</p>
-            <p>WDD 230 Project</p>
-            <p>Last Modified: <span id="last-modified"></span></p>
-        </div>
-    </footer>
-
-    <script src="scripts/discover.js"></script>
+  <script>
+    // Update footer dynamically
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
 </body>
 </html>
