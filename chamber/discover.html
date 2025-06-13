@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discover - Atron Chamber of Commerce</title>
-  <link rel="stylesheet" href="styles/base1.css" />
-  <link rel="stylesheet" href="styles/large1.css" />
+
+  <!-- ✅ Meta Description -->
+  <meta name="description" content="Explore Solomon Town's local attractions and businesses. Connect with the vibrant Atron Chamber of Commerce community and discover what makes our town unique.">
+
+
+  <!-- ✅ Meta Author -->
+  <meta name="author" content="Kusasira Solomon">
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <!-- ✅ Open Graph Meta Tags -->
+  <meta property="og:title" content="Discover - Atron Chamber of Commerce">
+  <meta property="og:description" content="Explore Solomon Town through local attractions, businesses, and community insights.">
+  <meta property="og:image" content="https://kusasirasolomon.github.io/wdd231/chamber/images/placeholder.webp">
+  <meta property="og:url" content="https://kusasirasolomon.github.io/wdd231/chamber/discover.html">
+
+  <!-- ✅ Styles -->
+  <link rel="stylesheet" href="styles/base1.css">
+  <link rel="stylesheet" href="styles/large1.css">
+
+  <!-- ✅ JS -->
   <script defer src="scripts/discover.js"></script>
 </head>
 <body>
   <header>
-    <h1>Atron Chamber of Commerce</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -22,22 +41,27 @@
   </header>
 
   <main class="discover-grid">
+    <!-- ✅ H1 in Main -->
+    <h1>Discover Atron Chamber of Commerce</h1>
+
+    <!-- ✅ Visitor Message -->
     <aside id="visit-message" class="sidebar">
-      <!-- Visitor message will go here -->
+      <!-- JS will display last visit message here -->
     </aside>
 
+    <!-- ✅ Cards (only one shown, duplicate to reach 6+) -->
     <section class="card-container">
-      <!-- Card 1 -->
       <div class="card">
-        <h2>Sun beach</h2>
-        <figure><img src="images/placeholder.webp" alt="Description" loading="lazy" /></figure>
+        <h2>Sun Beach</h2>
+        <figure>
+          <img src="images/placeholder.webp" alt="Peaceful beach" loading="lazy">
+        </figure>
         <address>123 Coastal Rd, Solomon Town</address>
-        <p>A peaceful beach perfect for evening walks and local events by the sea.it is nice to visit us</p>
+        <p>A peaceful beach perfect for evening walks and local events by the sea.</p>
         <button>Learn More</button>
       </div>
 
-      <!-- Repeat the above card structure 7 more times -->
-      <!-- Card 2–8: Fill in or dynamically load from JSON -->
+      <!-- 🟡 Add 5 more cards like this -->
     </section>
   </main>
 
@@ -46,6 +70,7 @@
     <p>Last Updated: <span id="lastModified"></span></p>
   </footer>
 
+  <!-- ✅ Dynamic year and last modified -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
