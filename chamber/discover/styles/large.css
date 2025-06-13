@@ -1,0 +1,24 @@
+@media (min-width: 641px) {
+  main.discover-grid {
+    grid-template-areas:
+      "sidebar cards";
+    grid-template-columns: 1fr 3fr;
+    align-items: start;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+}

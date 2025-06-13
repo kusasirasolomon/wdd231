@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Solomon National Museum",
+    "address": "Honiara, Solomon Islands",
+    "description": "Discover the rich cultural history of the Solomon Islands with artifacts, traditional canoes, and colonial records.",
+    "image": "images/museum.webp"
+  },
+  {
+    "name": "Marovo Lagoon",
+    "address": "Western Province, Solomon Islands",
+    "description": "The world’s largest saltwater lagoon with crystal-clear water, perfect for diving and eco-tourism.",
+    "image": "images/marovu.jpg"
+  },
+  {
+    "name": "Tenaru Waterfalls",
+    "address": "Tenaru, Guadalcanal Province",
+    "description": "A stunning rainforest waterfall offering hiking trails and natural swimming pools.",
+    "image": "images/tenaru.webp"
+  },
+  {
+    "name": "Bonegi Beach",
+    "address": "Bonegi I & II, West of Honiara",
+    "description": "Popular dive site with sunken World War II wrecks just off the beach.",
+    "image": "images/bonegi.webp"
+  },
+  {
+    "name": "Mataniko Falls",
+    "address": "Mataniko River, Honiara",
+    "description": "Explore the caves and natural falls made famous during WWII battles.",
+    "image": "images/mataniko-falls.webp"
+  },
+  {
+    "name": "Tulagi Island",
+    "address": "Central Province, Solomon Islands",
+    "description": "Historic WWII site and former capital with colonial buildings and scenic harbors.",
+    "image": "images/tulagi-island.webp"
+  },
+  {
+    "name": "Honiara Central Market",
+    "address": "Honiara Main Road",
+    "description": "Bustling local market with crafts, produce, and a chance to meet locals.",
+    "image": "images/central-market.webp"
+  },
+  {
+    "name": "Skull Island",
+    "address": "New Georgia, Solomon Islands",
+    "description": "Sacred island with ancestral skull shrines and traditional stories.",
+    "image": "images/skull-island.webp"
+  }
+]
