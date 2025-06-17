@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Adventure",
+    "category": "Movie",
+    "year": 2021,
+    "description": "An epic journey through uncharted lands and unexpected friendships.",
+    "image": "images/great-adventure.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Tech Innovators Conference",
+    "category": "Event",
+    "year": 2023,
+    "description": "Annual conference showcasing the latest in technology and innovation.",
+    "image": "images/tech-conference.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Healthy Eating Guide",
+    "category": "Book",
+    "year": 2020,
+    "description": "A comprehensive guide to nutrition and healthy living.",
+    "image": "images/healthy-eating.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Urban Photography",
+    "category": "Workshop",
+    "year": 2022,
+    "description": "Learn the art of capturing urban life through your lens.",
+    "image": "images/urban-photography.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Classical Music Festival",
+    "category": "Event",
+    "year": 2024,
+    "description": "Experience the best classical music performances live.",
+    "image": "images/music-festival.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Mindfulness Meditation",
+    "category": "Course",
+    "year": 2023,
+    "description": "A course to develop mindfulness and reduce stress.",
+    "image": "images/mindfulness.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Space Exploration Documentary",
+    "category": "Movie",
+    "year": 2021,
+    "description": "A fascinating look into the history and future of space travel.",
+    "image": "images/space-doc.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Creative Writing Seminar",
+    "category": "Workshop",
+    "year": 2023,
+    "description": "Unlock your creativity and improve your writing skills.",
+    "image": "images/writing-seminar.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Digital Marketing Strategies",
+    "category": "Course",
+    "year": 2022,
+    "description": "Learn effective digital marketing techniques for your business.",
+    "image": "images/digital-marketing.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Mountain Biking Trails",
+    "category": "Guide",
+    "year": 2020,
+    "description": "Discover the best mountain biking trails in your area.",
+    "image": "images/mountain-biking.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Art & Design Expo",
+    "category": "Event",
+    "year": 2024,
+    "description": "Explore the latest trends in art and design.",
+    "image": "images/art-expo.jpg"
+  },
+  {
+    "id": 12,
+    "title": "History of Ancient Civilizations",
+    "category": "Book",
+    "year": 2019,
+    "description": "A detailed look at the rise and fall of ancient civilizations.",
+    "image": "images/ancient-civilizations.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Yoga for Beginners",
+    "category": "Course",
+    "year": 2023,
+    "description": "Start your yoga journey with this beginner-friendly course.",
+    "image": "images/yoga-beginners.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Culinary Arts Workshop",
+    "category": "Workshop",
+    "year": 2022,
+    "description": "Master essential cooking techniques and recipes.",
+    "image": "images/culinary-arts.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Environmental Sustainability",
+    "category": "Seminar",
+    "year": 2023,
+    "description": "Learn about practices that promote sustainability and conservation.",
+    "image": "images/sustainability.jpg"
+  }
+]

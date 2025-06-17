@@ -1,0 +1,120 @@
+/* responsive.css - Modern responsive adjustments */
+
+/* Small phones (320px - 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.6;
+    background-color: #0f0f0f;
+    color: #eee;
+  }
+
+  header {
+    padding: 0.75rem 1rem;
+  }
+
+  header .logo img {
+    height: 30px;
+  }
+
+  .main-nav {
+    padding: 0 0.5rem;
+  }
+
+  .nav-menu {
+    width: 180px;
+    top: 58px; /* Adjust for smaller header */
+  }
+
+  .nav-menu li a {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  main {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+  }
+
+  .items-grid {
+    gap: 1.25rem;
+  }
+
+  .items-card .card-content {
+    padding: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem 0.75rem;
+  }
+}
+
+/* Medium phones and up (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  header .logo img {
+    height: 35px;
+  }
+
+  .main-nav {
+    padding: 0 1rem;
+  }
+
+  main {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  .items-grid {
+    padding: 1.5rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets and small desktops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  header .logo img {
+    height: 40px;
+  }
+
+  main {
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+  }
+
+  .items-grid {
+    padding: 2rem;
+  }
+}
+
+/* Large desktops (1025px and up) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 17px;
+  }
+
+  header .logo img {
+    height: 45px;
+  }
+
+  main {
+    margin: 2.5rem auto;
+    padding: 0 2rem;
+  }
+
+  .items-grid {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+}

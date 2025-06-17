@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About Atroflix | Your Ultimate Movie Showcase</title>
+  <meta name="description" content="Learn about Atroflix, our mission to bring you curated movies from around the world." />
+  <meta name="author" content="Kusasira Solomon" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Atroflix" />
+  <meta property="og:description" content="Learn about Atroflix, your ultimate movie showcase platform." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kusasirasolomon.github.io/wdd231/finalproject/about.html" />
+  <meta property="og:image" content="images/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favico.png" type="image/png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+  <!-- JavaScript -->
+  <script type="module" defer src="js/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Atroflix Home">
+        <img src="images/logo.webp" alt="Atroflix Logo" />
+      </a>
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <ul id="primary-menu" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="form-action.html">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>About Atroflix</h1>
+      <p class="tagline">Where Stories Come Alive in Every Language</p>
+      <img src="images/peoplewatching.webp" alt="People watching movies on various devices" loading="lazy" />
+    </section>
+
+    <section class="mission">
+      <h2>Our Mission</h2>
+      <p>
+        Atroflix is built on a vision to empower movie lovers with access to global cinema —
+        from African classics to international award-winners. Our platform is focused on cultural inclusion,
+        language diversity, and accessible storytelling. We believe in the power of film to educate, inspire, and entertain.
+      </p>
+    </section>
+
+    <section class="team">
+      <h2>Meet the Creator</h2>
+      <article class="team-member">
+        <img src="images/founder.webp" alt="Founder Kusasira Solomon" loading="lazy" />
+        <div>
+          <h3>Kusasira Solomon</h3>
+          <p>
+            Founder and full-stack web development student at BYU–Pathway. Solomon started Atroflix as a final web project,
+            combining his love for design, African cinema, and empowering people through technology.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="why">
+      <h2>Why Atroflix?</h2>
+      <ul>
+        <li>🎬 Culturally rich, hand-picked films</li>
+        <li>🌐 Language-based categorization</li>
+        <li>📱 Optimized for mobile and desktop devices</li>
+        <li>🕶️ Fully accessible and inclusive interface</li>
+      </ul>
+    </section>
+
+    <section class="call-to-action">
+      <h2>Ready to Watch?</h2>
+      <p><a href="index.html" class="btn">Explore Movies Now</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Atroflix. All rights reserved.</p>
+    <p><a href="attributions.html">Attributions</a> | <a href="https://youtu.be/your-demo-video" target="_blank" rel="noopener">Demo Video</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

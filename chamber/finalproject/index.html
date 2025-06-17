@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Atroflix - Home | Your Ultimate Movie Showcase</title>
+  <meta name="description" content="Atroflix is your go-to site for discovering movies from all around the world. Explore, watch, and enjoy curated selections." />
+  <meta name="author" content="Kusasira Solomon" />
+  
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Atroflix - Your Ultimate Movie Showcase" />
+  <meta property="og:description" content="Discover and enjoy curated movies from around the world on Atroflix." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kusasirasolomon.github.io/wdd231/finalproject/index.html" />
+  <meta property="og:image" content="images/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favico.png" type="image/png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+  <!-- JavaScript -->
+  <script type="module" defer src="js/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Atroflix Home">
+        <img src="images/logo.webp" alt="Atroflix Logo" />
+      </a>
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <ul id="primary-menu" class="nav-menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="form-action.html">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Atroflix</h1>
+      <p>Your ultimate destination for curated movies from around the world. Explore, watch, and enjoy your favorites!</p>
+      <a href="about.html" class="btn-primary">Learn More</a>
+    </section>
+
+    <section class="movie-showcase" aria-label="Featured Movies">
+      <h2>Featured Movies</h2>
+      <div id="movie-list" class="movie-list">
+        <!-- JavaScript will dynamically populate movie cards here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section id="items-container" class="items-grid" aria-live="polite"></section>
+<section class="items-grid">
+  <div class="items-card">
+    <img src="images/sample-movie.webp" alt="Movie title poster" loading="lazy" />
+    <div class="card-content">
+      <h3>Transporter</h3>
+      <p>Language: English</p>
+      <p>Genre: Action</p>
+      <p>Origin: America</p>
+    </div>
+  </div>
+  <!-- repeat more .items-card -->
+</section>
+
+    <p>© 2025 Kusasira Solomon</p>
+    <p>
+      <a href="videos/demo-video.mp4" target="_blank" rel="noopener">Project Demo Video</a>
+    </p>
+    <p>
+      <a href="attributions.html">Attributions</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Form Submission - Atroflix</title>
+  <meta name="description" content="View your submitted form data from Atroflix contact form." />
+  <meta name="author" content="Kusasira Solomon" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Form Submission - Atroflix" />
+  <meta property="og:description" content="View your submitted form data from Atroflix contact form." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kusasirasolomon.github.io/wdd231/finalproject/form-action.html" />
+  <meta property="og:image" content="images/logo.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favico.png" type="image/png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+
+  <!-- JavaScript -->
+  <script defer>
+    // Parse URL-encoded form data from POST or GET (for demo, using GET here)
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const output = document.getElementById('formDataOutput');
+
+      if (!params.toString()) {
+        output.innerHTML = '<p>No form data was submitted.</p>';
+        return;
+      }
+
+      const name = params.get('name') || 'N/A';
+      const email = params.get('email') || 'N/A';
+      const subject = params.get('subject') || 'N/A';
+      const message = params.get('message') || 'N/A';
+
+      output.innerHTML = `
+        <h2>Submitted Information</h2>
+        <dl>
+          <dt>Name:</dt><dd>${name}</dd>
+          <dt>Email:</dt><dd>${email}</dd>
+          <dt>Subject:</dt><dd>${subject}</dd>
+          <dt>Message:</dt><dd>${message}</dd>
+        </dl>
+      `;
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Atroflix Home">
+        <img src="images/logo.webp" alt="Atroflix Logo" />
+      </a>
+      <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <ul id="primary-menu" class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="form-action.html" aria-current="page">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-result">
+      <h1>Thank You for Your Submission</h1>
+      <div id="formDataOutput" aria-live="polite"></div>
+      <p><a href="contact.html">Return to Contact Page</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kusasira Solomon</p>
+    <p>
+      <a href="videos/demo-video.mp4" target="_blank" rel="noopener">Project Demo Video</a>
+    </p>
+    <p>
+      <a href="attributions.html">Attributions</a>
+    </p>
+  </footer>
+</body>
+</html>

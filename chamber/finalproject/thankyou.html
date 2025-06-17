@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Thank You - Atroflix</title>
+  <meta name="description" content="View your submitted form data from Atroflix contact form." />
+  <meta name="author" content="Kusasira Solomon" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const output = document.getElementById('formDataOutput');
+
+      if (!params.toString()) {
+        output.innerHTML = '<p>No form data was submitted.</p>';
+        return;
+      }
+
+      const name = params.get('name') || 'N/A';
+      const email = params.get('email') || 'N/A';
+      const subject = params.get('subject') || 'N/A';
+      const message = params.get('message') || 'N/A';
+
+      output.innerHTML = `
+        <h2>Submitted Information</h2>
+        <dl>
+          <dt>Name:</dt><dd>${name}</dd>
+          <dt>Email:</dt><dd>${email}</dd>
+          <dt>Subject:</dt><dd>${subject}</dd>
+          <dt>Message:</dt><dd>${message}</dd>
+        </dl>
+      `;
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <a href="index.html" class="logo" aria-label="Atroflix Home">
+        <img src="images/logo.webp" alt="Atroflix Logo" />
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-result">
+      <h1>Thank You for Your Submission</h1>
+      <div id="formDataOutput" aria-live="polite"></div>
+      <p><a href="contact.html">Return to Contact Page</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kusasira Solomon</p>
+    <a href="videos/demo-video.mp4" target="_blank" rel="noopener">Project Demo Video</a> |
+    <a href="attributions.html">Attributions</a>
+  </footer>
+</body>
+</html>
